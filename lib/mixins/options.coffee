@@ -32,3 +32,39 @@ DataTableMixins.Options =
         # `_.debounce` is used to prevent unneccesary subcription calls while typing a search
         options.fnServerData = _.debounce( @fnServerData.bind( @ ), 300 )
     @setOptions _.defaults( options, @defaultOptions )
+
+  options:
+    display:
+      # ##### Bootstrap 3 Markup
+      # You can change this by setting `Template.dataTable.defaultOptions.sDom` property.
+      # For some example Less / CSS styles check out [luma-ui's dataTable styles](https://github.com/LumaPictures/luma-ui/blob/master/components/dataTables/dataTables.import.less)
+      sDom: "<\"datatable-header\"fl><\"datatable-scroll\"rt><\"datatable-footer\"ip>"
+
+    pagination:
+      sPaginationType: "full_numbers"
+      oLanguage:
+        sSearch: "_INPUT_"
+        sLengthMenu: "<span>Show :</span> _MENU_"
+        # ##### Loading Message
+        # Set `oLanguage.sProcessing` to whatever you want, event html. I haven't tried a Meteor template yet, could be fun!
+        sProcessing: "Loading"
+        oPaginate:
+          sFirst: "First"
+          sLast: "Last"
+          sNext: ">"
+          sPrevious: "<"
+
+    stateSave:
+      stateSave: true
+      stateSaveParams: ( settings, data ) ->
+        console.log 'save params'
+        console.log settings
+        console.log data
+      stateLoaded: ( settings, data ) ->
+        console.log 'loaded'
+        console.log settings
+        console.log data
+      stateLoadParams: ( settings, data ) ->
+        console.log 'load params'
+        console.log settings
+        console.log data
