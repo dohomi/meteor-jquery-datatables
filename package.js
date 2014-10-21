@@ -4,7 +4,6 @@ Package.describe({
 
 Package.on_use(function (api, where) {
   api.use([
-    'coffeescript',
     'underscore',
     'luma-component'
   ],[ 'client', 'server' ]);
@@ -31,13 +30,13 @@ Package.on_use(function (api, where) {
 
   /* Mixins */
   api.add_files([
-    'lib/mixins/Base.mixin.coffee',
-    'lib/mixins/Collection.mixin.coffee',
-    'lib/mixins/Columns.mixin.coffee',
-    'lib/mixins/Publish.mixin.coffee',
-    'lib/mixins/Query.mixin.coffee',
-    'lib/mixins/Subscription.mixin.coffee',
-    'lib/mixins/Rows.mixin.coffee'
+    'lib/mixins/Base.mixin.js',
+    'lib/mixins/Collection.mixin.js',
+    'lib/mixins/Columns.mixin.js',
+    'lib/mixins/Publish.mixin.js',
+    'lib/mixins/Query.mixin.js',
+    'lib/mixins/Subscription.mixin.js',
+    'lib/mixins/Rows.mixin.js'
   ], [ 'client', 'server' ]);
 
   /* Template */
@@ -47,7 +46,7 @@ Package.on_use(function (api, where) {
 
   /* Component */
   api.add_files([
-    'lib/DataTables.component.coffee'
+    'lib/DataTables.component.js'
   ], [ 'client', 'server']);
 });
 
@@ -61,24 +60,24 @@ Package.on_test(function (api) {
 
   /* Fixtures */
   api.add_files([
-    'tests/fixtures/ReactiveData.fixture.coffee',
-    'tests/fixtures/StaticData.fixture.coffee',
-    'tests/fixtures/Publish.fixture.coffee'
+    'tests/fixtures/ReactiveData.fixture.js',
+    'tests/fixtures/StaticData.fixture.js',
+    'tests/fixtures/Publish.fixture.js'
   ], [ 'client', 'server' ]);
 
   /* Component */
   api.add_files([
-    'tests/DataTables.component.test.coffee'
+    'tests/DataTables.component.test.js'
   ], ['client', 'server']);
 
   /* Mixins */
   api.add_files([
-    'tests/mixins/Base.mixin.test.coffee',
-    'tests/mixins/Collection.mixin.test.coffee',
-    'tests/mixins/Columns.mixin.test.coffee',
-    'tests/mixins/Rows.mixin.test.coffee',
-    'tests/mixins/Publish.mixin.test.coffee',
-    'tests/mixins/Query.mixin.test.coffee',
-    'tests/mixins/Subscription.mixin.test.coffee'
+    'tests/mixins/Base.mixin.test.js',
+    'tests/mixins/Collection.mixin.test.js',
+    'tests/mixins/Columns.mixin.test.js',
+    'tests/mixins/Rows.mixin.test.js',
+    'tests/mixins/Publish.mixin.test.js',
+    'tests/mixins/Query.mixin.test.js',
+    'tests/mixins/Subscription.mixin.test.js'
   ], [ 'client', 'server' ]);
 });

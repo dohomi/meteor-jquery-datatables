@@ -4,7 +4,7 @@
   "homepage": "https://github.com/lumapictures/meteor-jquery-datatables",
   "author": "Austin Rivas <austinrivas@gmail.com> (https://github.com/austinrivas)",
   "version": "1.0.5",
-  "git": "https://github.com/lumapictures/meteor-jquery-datatables",
+  "git": "https://github.com/dohomi/meteor-jquery-datatables",
   "packages": {
     "luma-component": {}
   }
